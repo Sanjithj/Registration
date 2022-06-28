@@ -32,9 +32,86 @@ public class UserRegistration {
 		        System.out.println("Enter the Password");
 		        String password = scannerObject.next();
 		        checkPassword(password);
+		        
+		        System.out.println("******* Valid Emails  ********");
+				 
+		        email = "abc@yahoo.com";
+		        checkValidEmail(email);
+
+		        email = "abc-100@yahoo.com";
+		        checkValidEmail(email);
+
+		        email = "abc.100@yahoo.com";
+		        checkValidEmail(email);
+
+		        email = "abc111@abc.com";
+		        checkValidEmail(email);
+
+		        email = "abc-100@abc.net";
+		        checkValidEmail(email);
+
+		        email = "abc.100@abc.com.au";
+		        checkValidEmail(email);
+
+		        email = "abc@1.com";
+		        checkValidEmail(email);
+
+		        email = "abc@gmail.com.com";
+		        checkValidEmail(email);
+
+		        email = "abc+100@gmail.com";
+		        checkValidEmail(email);
+
+		        System.out.println("*****************************************");
+
+		        System.out.println("******** Invalid Emails *********");
+
+
+		        email = "abc";
+		        checkValidEmail(email);
+
+		        email = "abc@.com.my";
+		        checkValidEmail(email);
+
+		        email = "abc123@gmail.a";
+		        checkValidEmail(email);
+
+		        email = "abc123@.com";
+		        checkValidEmail(email);
+
+		        email = "abc123@.com.com";
+		        checkValidEmail(email);
+
+		        email = ".abc@abc.com";
+		        checkValidEmail(email);
+
+		        email = "abc()*@gmail.com";
+		        checkValidEmail(email);
+
+		        email = "abc@%*.com";
+		        checkValidEmail(email);
+
+		        email = "abc..2002@gmail.com";
+		        checkValidEmail(email);
+
+		        email = "abc.@gmail.com";
+		        checkValidEmail(email);
+
+		        email = "abc@abc@gmail.com";
+		        checkValidEmail(email);
+
+		        email = "abc@gmail.com.1a";
+		        checkValidEmail(email);
+
+		        email = "abc@gmail.com.aa.au";
+		        checkValidEmail(email);
+
+		        System.out.println("***************************************");
+
+		    }
 		 }
 	    
-	}
+	
 		
 		    public static void checkValidFirstName(String firstName) {
 
@@ -169,6 +246,9 @@ public class UserRegistration {
 			        else
 			            System.out.println(password+"  Password is InValid");
 			    }
-
+			
+			
 }
+
+
 
