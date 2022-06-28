@@ -29,6 +29,9 @@ public class UserRegistration {
 		        String mobileNumber = scannerObject.next();
 		        checkMobileNumber(mobileNumber);
 
+		        System.out.println("Enter the Password");
+		        String password = scannerObject.next();
+		        checkPassword(password);
 		 }
 	    
 	}
@@ -100,6 +103,22 @@ public class UserRegistration {
 			            System.out.println(mobileNumber+ "  Valid  Mobile Number\n");
 			        else
 			            System.out.println(mobileNumber+ "   Invalid Mobile Number");
+			    }
+			 public static void checkPassword(String password){
+
+			        boolean isPassword;
+			        String passwordRegex = "^([a-zA-Z0-9]*[\\-\\!\\@\\#\\$\\%\\^\\&\\*\\(\\)\\_\\+]*){8}$";
+			        Pattern patternObject = Pattern.compile(passwordRegex);
+			        if (password == null) {
+			            isPassword = false;
+			        }
+			        Matcher matcherObject = patternObject.matcher(password);
+			        isPassword =  matcherObject.matches();
+
+			        if(isPassword)
+			            System.out.println(password+"   Password is  Valid\n");
+			        else
+			            System.out.println(password+"   Password is Invalid");
 			    }
 }
 
