@@ -120,5 +120,21 @@ public class UserRegistration {
 			        else
 			            System.out.println(password+"   Password is Invalid");
 			    }
+			 public static void checkUppercase(String password){
+
+			        boolean isPassword;
+			        String passwordRegex = "^(?=.*[A-Z])([a-zA-Z0-9]*([@#$%^&-+=()])*).{8,}$";
+			        Pattern patternObject = Pattern.compile(passwordRegex);
+			        if (password == null) {
+			            isPassword = false;
+			        }
+			        Matcher matcherObject = patternObject.matcher(password);
+			        isPassword =  matcherObject.matches();
+
+			        if(isPassword)
+			            System.out.println(password+"   Password is  Valid\n");
+			        else
+			            System.out.println(password+"  Password is Invalid");
+			    }
 }
 
